@@ -133,9 +133,17 @@ def _compute_ea(x_new, x_old):
 
 
 def _compute_true_ea(root, true_root):
-    """Compute true relative error percent: |(true_root - root)/true_root| * 100."""
-    if true_root is None or true_root == 0:
+    """Compute true relative error percent: |(true_root - root)/true_root| * 100.
+
+    If true_root is None: returns None.
+    If true_root == 0: returns 0.0 when root == 0, else inf.
+    """
+    if true_root is None:
         return None
+    if true_root == 0:
+        if root == 0:
+            return 0.0
+        return float('inf')
     return abs((true_root - root) / true_root) * 100
 
 
