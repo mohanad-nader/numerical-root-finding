@@ -1,6 +1,6 @@
-"""Plot f(x), or g(x) against y = x, to pick initial guesses.  YOU WRITE THIS FILE.
+"""Plot f(x), or g(x) against y = x, to pick initial guesses. 
 
-Use matplotlib (numpy is allowed here). Not autograded; the figures go in your report.
+Using matplotlib (numpy is allowed here). figs.
 """
 
 from __future__ import annotations

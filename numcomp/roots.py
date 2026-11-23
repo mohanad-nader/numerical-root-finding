@@ -1,4 +1,4 @@
-"""Root-finding methods on the simulated machine.  YOU WRITE THIS FILE.
+"""Root-finding methods on the simulated machine.
 
 Read README.md, sections 4 "Methods" and 5 "Result and errors", before starting.
 Every method takes ``f`` (or ``g``) as a string or a parsed Expression and

@@ -1,4 +1,4 @@
-"""Simulated n-significant-figure decimal machine.  YOU WRITE THIS FILE.
+"""Simulated n-significant-figure decimal machine. 
 
 Read README.md, section 2 "The machine", before starting.
 Rules: no `decimal`, no built-in `round()`, no `Fraction.__round__`.
@@ -10,7 +10,7 @@ from __future__ import annotations
 import math
 from fractions import Fraction
 
-from .errors import DivergenceError  # noqa: F401  (you will raise it)
+from .errors import DivergenceError  # noqa: F401  pls raise it
 
 MODES = ("round", "chop")
 MAX_SIG_FIGS = 12
