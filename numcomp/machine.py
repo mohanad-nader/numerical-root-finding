@@ -142,8 +142,6 @@ def round_sig(value, n, mode="round"):
     if mode == "chop":
         # Truncate: take the integer part (floor for positive)
         int_part = int(shifted)  # Fraction → int truncates toward zero for positive
-        if shifted < 0:
-            int_part = -int(-shifted)
         # But abs_q is positive, so shifted is positive
         # floor of a positive Fraction
         if shifted == int_part:
