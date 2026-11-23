@@ -140,20 +140,8 @@ def round_sig(value, n, mode="round"):
     shifted = abs_q * Fraction(10) ** shift  # exact
 
     if mode == "chop":
-        # Truncate: take the integer part (floor for positive)
-        int_part = int(shifted)  # Fraction → int truncates toward zero for positive
-        if shifted < 0:
-            int_part = -int(-shifted)
-        # But abs_q is positive, so shifted is positive
-        # floor of a positive Fraction
-        if shifted == int_part:
-            rounded_int = int_part
-        else:
-            rounded_int = int(shifted)  # int() truncates toward zero
-            # For positive fractions, truncation IS floor when positive
+        rounded_int = int(shifted)
     else:
-        # Round half away from zero
-        # Add 0.5 and floor
         rounded_int = int(shifted + Fraction(1, 2))
 
     # Convert back: result = sign * rounded_int * 10**(e - n + 1)
